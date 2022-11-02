@@ -42,20 +42,20 @@ function App() {
     }, [todos, status]); 
     //get the local stoarge
     //get the todos and put them in local stoarge
+
     //to run once 
-    /*useEffect(() =>{
+    useEffect(() =>{
         function getLocalTodos(){
           if(localStorage.getItem('todos') === null){
             localStorage.setItem('todos', JSON.stringify([]));
           }
           else {
-            let todoLocal = localStorage.getItem('todos', JSON.stringify(todos));
+            let todoLocal = JSON.parse(localStorage.getItem('todos'));
             setTodos(todoLocal);
           }
         }
         getLocalTodos();
       }, []);
-      */
   //functions 
   return (
     <div className="App">
